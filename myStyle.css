@@ -52,8 +52,9 @@ h2 {
     position: relative;
     right: 15rem;
     display: none;
-    transform-origin: top;
-    animation: animate 0.5s;
+     transform-origin: top;
+    animation: animate 0.5s; 
+    animation-timing-function: ease-in-out;
 }
 .child-active {
     display: block;
@@ -89,16 +90,37 @@ h2 {
 
 @keyframes animate {
     from {
-        transform: scale(1, 0);
-        opacity: 0;
+        right: 0;
+        /* transform: scale(1, 0);
+        opacity: 0; */
     }
     to {
-        transform: scale(1, 1);
-        opacity: 1;
+        right: 1;
+        /* transform: scale(1, 1);
+        opacity: 1; */
     }
 }
 
         /* Buttons */
+
+.logs {
+    position: relative;
+    left: 80em;
+    top: -48px;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid var(--myColor);
+    font-size: 1em;
+    color: #f3f3f3;
+    letter-spacing: 1px;
+}
+.logs:hover {
+    border: 1px solid #f3f3f3;
+}
 .btn {
     margin-top: 3rem;
     padding: 0.75rem;
@@ -124,3 +146,4 @@ h2 {
     border: 0;
     font-size: 1.08em;
 }
+
