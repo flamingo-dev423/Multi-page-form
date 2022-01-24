@@ -1,59 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multi page Form</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="myStyle.css" type="text/css">
 </head>
+
 <body>
-    <div class="logo">
-    <h1>intern <span> Finder</span></h1>
-</div>
-    <h2>registration form</h2>
-    <button class="logs">Login</button>
-    <button class="logs">Register</button>
-    <div class="container">
-        <div class="illustrator-container">
-            <img src="./illustration2.svg" alt="notify">
+    <div>
+        <div id="topNav">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1> intern <span> Finder</span></h1>
+                </div>
+                <div class="push-left">
+                    <button id="menu-toggler" data-class="menu-active" class="hamburger">
+                        <span class="hamburger-line hamburger-line-top"></span>
+                        <span class="hamburger-line hamburger-line-middle"></span>
+                        <span class="hamburger-line hamburger-line-bottom"></span>
+                    </button>
+                    <ul id="primary-menu" class="menu nav-menu">
+                        <!-- <li class="menu-item current-menu-item">
+                            <a class="nav__link" href="#">Home</a>
+                        </li> -->
+                        <!-- <li class="menu-item dropdown"><a class="nav__link" href="#">About</a>
+                            <ul class="sub-nav">
+                                <li><a class="sub-nav__link" href="#">link 1</a></li>
+                                <li><a class="sub-nav__link" href="#">link 2</a></li>
+                                <li><a class="sub-nav__link" href="#">link 3 - long link - long link - long link</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <li class="menu-item dropdown">
+                            <button class="logs nav__link">Login</button>
+                        </li>
+                        <li class="menu-item ">
+                            <button class="logs nav__link">Register</button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
         </div>
-        <div class="child-container radio-container  child-active">
-            <input type="radio" name="User Type" value="Organisation" checked> Organisation <br>
-            <input type="radio" name="User Type" value="Intern"> Intern  <br>
-            <input type="radio" name="User Type" value="Others">  Others
-            <div class=" ">
-                <a href="#" class="btn btn-next  width-50 ml-auto">Next</a>
+        <div class="body-container">
+
+
+            <div class="header">
+                <h2>Registration Form</h2>
             </div>
-            </div>
-        <div class="child-container">
-        <form action="#"  method="POST"  class="form">
-            <input type="text" placeholder="Full Name" id="name" required>
-            <div class="btn-group ">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <a href="#" class="btn btn-next">Next</a>
-            </div>
-        </form>
-    </div>
-    <div class="child-container">
-            <input type="email" placeholder="Email" id="name" required>
-            <div class="btn-group ">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <a href="#" class="btn btn-next">Next</a>
-            </div>
-            </div>
-         
-            <div class="child-container">
-                <input type="password" placeholder="Password" id="name" required>
-                <input type="password" placeholder="Confirm Password" id="name">
-                <div class="btn-group ">
-                    <a href="#" class="btn btn-prev">Previous</a>
-                    <input type="submit" value="submit" class="btn btn1">
+
+
+            <div class="container">
+                <div class="illustrator-container">
+                    <img src="./illustration2.svg" alt="notify">
                 </div>
+                <div class="form-container">
+                    <div class="child-container radio-container  child-active">
+                        <input type="radio" name="User Type" value="Organisation" checked> Organisation <br>
+                        <input type="radio" name="User Type" value="Intern"> Intern <br>
+                        <input type="radio" name="User Type" value="Others"> Others
+                        <div class=" ">
+                            <a href="#" class="btn btn-next  width-50 ml-auto">Next</a>
+                        </div>
+                    </div>
+                    <div class="child-container">
+                        <form action="#" method="POST" class="form">
+                            <input type="text" placeholder="Full Name" id="name" required>
+                            <div class="btn-group ">
+                                <a href="#" class="btn btn-prev">Previous</a>
+                                <a href="#" class="btn btn-next">Next</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="child-container">
+                        <input type="email" placeholder="Email" id="name" required>
+                        <div class="btn-group ">
+                            <a href="#" class="btn btn-prev">Previous</a>
+                            <a href="#" class="btn btn-next">Next</a>
+                        </div>
+                    </div>
+
+                    <div class="child-container">
+                        <input type="password" placeholder="Password" id="name" required>
+                        <input type="password" placeholder="Confirm Password" id="name">
+                        <div class="btn-group ">
+                            <a href="#" class="btn btn-prev">Previous</a>
+                            <input type="submit" value="submit" class="btn btn1">
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="myScript.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Toggle menu on click
+            $("#menu-toggler").click(function () {
+                toggleBodyClass("menu-active");
+            });
+
+            function toggleBodyClass(className) {
+                document.body.classList.toggle(className);
+            }
+
+        });
+    </script>
 </body>
+
 </html>
